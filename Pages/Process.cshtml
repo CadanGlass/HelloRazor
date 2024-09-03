@@ -1,0 +1,13 @@
+@page
+@using System.Diagnostics
+@model HelloRazor.Pages.ProcessModel
+@{
+    Process[] procs = ViewData["Procs"] as Process[];
+}
+
+<div>
+    <h2>Process Page</h2>
+    @foreach (var p in procs) {
+        <div>@p.ProcessName</div>
+    }
+</div>
